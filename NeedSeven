@@ -11,9 +11,9 @@ def NeedSeven():
         print("If you dont you LOSE!")
         print("If you roll a double you get to try again!")
         DieA = rollofdie()
-        print("Die One Total: " + str(DieA))
+        print("Die A Total: " + str(DieA))
         DieB = rollofdie()
-        print("Die Two Total: " + str(DieB))
+        print("Die B Total: " + str(DieB))
         Total = DieA + DieB
         print("Total: " + str(Total))
         if DieA + DieB == 7:
