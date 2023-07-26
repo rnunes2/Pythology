@@ -1,0 +1,33 @@
+import random
+def NeedSeven():
+    DieA = 0
+    DieB = 0
+    Total = 0
+    Wins = 0
+    Losses = 0
+    Rolls = 1
+    while Rolls != 11:
+        print("If you roll a 7 you WIN!")
+        print("If you dont you LOSE!")
+        print("If you roll a double you get to try again!")
+        DieA = rollofdie()
+        print("Die One Total: " + str(DieA))
+        DieB = rollofdie()
+        print("Die Two Total: " + str(DieB))
+        Total = DieA + DieB
+        print("Total: " + str(Total))
+        if DieA + DieB == 7:
+            Wins = Wins + 1
+            print("YOU WIN!\n"),
+        elif DieA == DieB:
+            print("TRY AGAIN!\n"), 
+        else:
+            Losses = Losses + 1
+            print("YOU LOSE\n"), 
+        Rolls = Rolls + 1
+    print("Wins: " + str(Wins))
+    print("Losses: " + str(Losses))
+def rollofdie():
+    diceRoll = random.randint(1, 6)
+    return diceRoll
+NeedSeven()
